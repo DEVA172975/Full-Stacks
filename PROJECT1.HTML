@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Personal Finance Tracker</title>
+
+    <style>
+        :root {
+            --bg-gradient-start: #312651;
+            --bg-gradient-end: #dfcdba;
+            --column-bg: rgba(227, 78, 78, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.15);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --text-color: #e0e0e0;
+            --primary-color: #ffcc00;
+            --delete-color: #ff6b6b;
+            --input-bg: rgba(255, 255, 255, 0.2);
+            --input-border: rgba(255, 255, 255, 0.3);
+
+
+            --color-backlog: #FF416C;
+            --color-doing: #28a745;
+            --color-done: #007bff;
+            --color-wontdo: #6c757d;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+
+            display: inline-block;
+
+
+            background: #312651;
+            color: var(--text-color);
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-left:30%;
+        }
+
+        h2 {
+            color: #ffd700;
+            text-align: center;
+            margin-left:30%;
+        }
+
+        h4{
+            color: #ffd700;
+            text-align: center;
+            
+        }
+
+        h3 {
+            color: #FF416C;
+            text-align: center;
+            margin-left:30%;
+        }
+
+
+        .header-section {
+           
+            padding: 30px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #task-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-grow: 1;
+            margin-right:25%;
+            margin-left: 25%;;
+            align-items: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+
+        #task-form button {
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: var(--bg-gradient-start);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+
+        }
+
+        #task-form button:hover {
+            background-color: #ffd700;
+
+        }
+
+
+        .bill-board {
+            display: flex;
+            gap: 25px;
+            margin: 20%;
+            width: 108%;
+            box-sizing: border-box;
+            flex-grow: 1;
+        }
+
+        .column {
+            background-color: var(--column-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+           
+            flex: 1;
+           
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .task-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-section">
+        <div class="board-info">
+            <h1>
+                Personal finance tracker
+            </h1>
+            <h2>ADD NEW EXPESES FOR</h2>
+            <h3>October 2025</h3>
+        </div>
+
+        <form id="task-form">
+
+            Expense name<input type="text" id="task-title" placeholder="Expense made for" required>
+            Ammount<input type="number" id="amount" placeholder="in dollars" required>
+            Category<input type="text" id="category" placeholder="Expense made for" required>
+            Date<input type="date" id="dates" placeholder="date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+    <div class="bill-board">
+        <div class="column">
+            <h4>
+                ADDED EXPENSES OF OCTOBER 2025
+            </h4>
+                    <p>Expense Name:</p>
+                    <p>Ammount:</p>
+                    <p>Category:</p>
+                    <p>Date:</p>
+            </div>
+        </div>
+
+</body>
+
+</html>
